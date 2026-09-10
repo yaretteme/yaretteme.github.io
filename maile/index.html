@@ -1,0 +1,618 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>麦乐迪-热门点唱娱乐与聚会欢唱指南</title>
+    <meta name="description" content="麦乐迪是广受欢迎的量贩式KTV与点唱娱乐品牌，这里提供欢唱攻略、曲库查询、聚会套餐参考以及常见问题解答，助你轻松开启欢乐聚会时光。">
+    <meta name="keywords" content="麦乐迪,KTV,量贩式KTV,点唱,欢唱,聚会,唱歌,曲库,娱乐">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: "PingFang SC", "Microsoft YaHei", sans-serif;
+            background: #f8f4f0;
+            color: #2e2a26;
+            line-height: 1.6;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        header {
+            background: linear-gradient(145deg, #1a1a2e 0%, #16213e 100%);
+            color: #fff;
+            padding: 20px 0;
+            border-bottom: 4px solid #e94560;
+        }
+        .header-wrap {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .logo {
+            font-size: 2rem;
+            font-weight: 800;
+            letter-spacing: 2px;
+            background: linear-gradient(135deg, #f5af19, #f12711);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .logo span {
+            font-size: 0.9rem;
+            font-weight: 400;
+            color: #aaa;
+            margin-left: 10px;
+            letter-spacing: 1px;
+        }
+        nav ul {
+            list-style: none;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 24px;
+        }
+        nav a {
+            color: #ddd;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.2s;
+            font-size: 1rem;
+        }
+        nav a:hover {
+            color: #f5af19;
+        }
+        .hero {
+            background: linear-gradient(120deg, #1a1a2e 0%, #16213e 60%, #0f3460 100%);
+            color: #fff;
+            padding: 60px 0 50px;
+            text-align: center;
+        }
+        .hero h1 {
+            font-size: 2.8rem;
+            font-weight: 700;
+            margin-bottom: 12px;
+            letter-spacing: 2px;
+        }
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 600px;
+            margin: 0 auto 25px;
+            color: #ccc;
+        }
+        .hero .btn-group {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        .btn {
+            display: inline-block;
+            padding: 12px 28px;
+            border-radius: 50px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: transform 0.2s, box-shadow 0.2s;
+            border: 2px solid transparent;
+        }
+        .btn-primary {
+            background: #e94560;
+            color: #fff;
+        }
+        .btn-outline {
+            border-color: #f5af19;
+            color: #f5af19;
+        }
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+        }
+        .features {
+            padding: 50px 0;
+            background: #fff;
+        }
+        .section-title {
+            text-align: center;
+            font-size: 2rem;
+            margin-bottom: 10px;
+            font-weight: 700;
+            color: #1a1a2e;
+        }
+        .section-sub {
+            text-align: center;
+            color: #777;
+            margin-bottom: 40px;
+            font-size: 1rem;
+        }
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 30px;
+        }
+        .feature-card {
+            background: #faf7f4;
+            padding: 30px 20px;
+            border-radius: 14px;
+            text-align: center;
+            transition: all 0.2s;
+            border: 1px solid #eee;
+        }
+        .feature-card:hover {
+            box-shadow: 0 10px 25px rgba(0,0,0,0.07);
+            transform: translateY(-5px);
+        }
+        .feature-icon {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+            display: block;
+        }
+        .feature-card h3 {
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+            color: #1a1a2e;
+        }
+        .feature-card p {
+            color: #555;
+            font-size: 0.95rem;
+        }
+        .song-section {
+            padding: 50px 0;
+            background: #f8f4f0;
+        }
+        .song-cats {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            justify-content: center;
+            margin-bottom: 30px;
+        }
+        .cat-tag {
+            background: #fff;
+            border: 1px solid #ddd;
+            padding: 8px 20px;
+            border-radius: 30px;
+            font-weight: 500;
+            font-size: 0.9rem;
+            cursor: default;
+            transition: all 0.2s;
+        }
+        .cat-tag:hover {
+            background: #1a1a2e;
+            color: #fff;
+            border-color: #1a1a2e;
+        }
+        .song-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+            gap: 20px;
+        }
+        .song-item {
+            background: #fff;
+            border-radius: 12px;
+            padding: 18px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+            transition: box-shadow 0.2s;
+            border-left: 4px solid #e94560;
+        }
+        .song-item h4 {
+            font-size: 1.1rem;
+            color: #1a1a2e;
+            margin-bottom: 6px;
+        }
+        .song-item .singer {
+            color: #888;
+            font-size: 0.85rem;
+            margin-bottom: 8px;
+        }
+        .song-item .hot {
+            background: #ffe8e8;
+            color: #e94560;
+            font-size: 0.75rem;
+            padding: 3px 8px;
+            border-radius: 12px;
+            display: inline-block;
+        }
+        .packages {
+            padding: 50px 0;
+            background: #fff;
+        }
+        .pkg-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+        }
+        .pkg-card {
+            border: 1px solid #eee;
+            border-radius: 16px;
+            padding: 30px;
+            background: #fdfbf9;
+            position: relative;
+        }
+        .pkg-card .tag {
+            position: absolute;
+            top: -12px;
+            left: 20px;
+            background: #e94560;
+            color: #fff;
+            padding: 4px 14px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+        }
+        .pkg-card h3 {
+            font-size: 1.4rem;
+            margin-bottom: 8px;
+            color: #1a1a2e;
+        }
+        .pkg-card .price {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: #e94560;
+            margin-bottom: 12px;
+        }
+        .pkg-card ul {
+            list-style: none;
+        }
+        .pkg-card li {
+            padding: 5px 0;
+            border-bottom: 1px dashed #eee;
+            font-size: 0.95rem;
+            color: #444;
+        }
+        .pkg-card li:before {
+            content: "✓ ";
+            color: #2a9d8f;
+            font-weight: 700;
+        }
+        .tips-section {
+            padding: 50px 0;
+            background: #f8f4f0;
+        }
+        .tips-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 25px;
+        }
+        .tip-box {
+            background: #fff;
+            padding: 25px;
+            border-radius: 12px;
+            border-left: 5px solid #f5af19;
+        }
+        .tip-box h3 {
+            font-size: 1.1rem;
+            margin-bottom: 10px;
+            color: #1a1a2e;
+        }
+        .tip-box p {
+            color: #555;
+            font-size: 0.92rem;
+        }
+        .faq-section {
+            padding: 50px 0;
+            background: #fff;
+        }
+        .faq-list {
+            max-width: 850px;
+            margin: 0 auto;
+        }
+        .faq-item {
+            border-bottom: 1px solid #eee;
+            padding: 18px 0;
+        }
+        .faq-item summary {
+            font-weight: 600;
+            font-size: 1.05rem;
+            cursor: pointer;
+            color: #1a1a2e;
+            list-style: none;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .faq-item summary::-webkit-details-marker {
+            display: none;
+        }
+        .faq-item summary:after {
+            content: "+";
+            font-size: 1.8rem;
+            color: #e94560;
+            font-weight: 300;
+        }
+        .faq-item[open] summary:after {
+            content: "−";
+        }
+        .faq-item p {
+            margin-top: 12px;
+            color: #555;
+            padding-left: 5px;
+            border-left: 3px solid #f5af19;
+            padding-left: 15px;
+        }
+        footer {
+            background: #1a1a2e;
+            color: #aaa;
+            padding: 30px 0;
+            text-align: center;
+            font-size: 0.9rem;
+            border-top: 4px solid #e94560;
+        }
+        footer a {
+            color: #f5af19;
+            text-decoration: none;
+        }
+        .copyright {
+            margin-top: 10px;
+            color: #666;
+            font-size: 0.8rem;
+        }
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+            .hero p {
+                font-size: 1rem;
+            }
+            .header-wrap {
+                flex-direction: column;
+                gap: 15px;
+                text-align: center;
+            }
+            nav ul {
+                justify-content: center;
+                gap: 15px;
+                flex-wrap: wrap;
+            }
+            .logo span {
+                display: block;
+                margin-left: 0;
+                margin-top: 5px;
+            }
+        }
+        @media (max-width: 480px) {
+            .container {
+                padding: 0 15px;
+            }
+            .btn {
+                padding: 10px 20px;
+                font-size: 0.9rem;
+            }
+            .feature-grid {
+                gap: 15px;
+            }
+            .feature-card {
+                padding: 20px 15px;
+            }
+            .section-title {
+                font-size: 1.6rem;
+            }
+        }
+    </style>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</head>
+<body>
+    <header>
+        <div class="container header-wrap">
+            <div class="logo">麦乐迪<span>欢乐点唱 · 聚会首选</span></div>
+            <nav>
+                <ul>
+                    <li><a href="#features">品牌特色</a></li>
+                    <li><a href="#songs">热门曲库</a></li>
+                    <li><a href="#packages">欢唱套餐</a></li>
+                    <li><a href="#tips">欢唱攻略</a></li>
+                    <li><a href="#faq">常见问题</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <h1>麦乐迪，唱响每一刻欢聚时光</h1>
+            <p>作为深受大众喜爱的量贩式点唱娱乐空间，麦乐迪以丰富的曲库、舒适的环境和灵活的开唱模式，成为朋友聚会、家庭休闲与团队活动的热门选择。</p>
+            <div class="btn-group">
+                <a href="#packages" class="btn btn-primary">查看欢唱套餐</a>
+                <a href="#songs" class="btn btn-outline">浏览热门歌曲</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="features" id="features">
+        <div class="container">
+            <h2 class="section-title">为什么选择麦乐迪？</h2>
+            <p class="section-sub">从点唱体验到聚会服务，带来更自在的娱乐感受</p>
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <span class="feature-icon">🎤</span>
+                    <h3>海量曲库更新</h3>
+                    <p>持续收录流行金曲、经典老歌与热门新歌，覆盖多种语言和风格，总能找到你想唱的那一首。</p>
+                </div>
+                <div class="feature-card">
+                    <span class="feature-icon">🛋️</span>
+                    <h3>舒适欢唱环境</h3>
+                    <p>从灯光到音响，从沙发到空间布局，营造轻松又有氛围的欢唱体验，适合不同规模的聚会。</p>
+                </div>
+                <div class="feature-card">
+                    <span class="feature-icon">🍹</span>
+                    <h3>灵活聚会套餐</h3>
+                    <p>针对不同时段、人数和需求提供多种选择，无论是白天小聚还是夜晚狂欢，都能找到合适的方案。</p>
+                </div>
+                <div class="feature-card">
+                    <span class="feature-icon">📱</span>
+                    <h3>智能点唱系统</h3>
+                    <p>触屏点歌、手机扫码点唱等便捷操作方式，让选歌不再繁琐，点歌更快速，切歌更自由。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="song-section" id="songs">
+        <div class="container">
+            <h2 class="section-title">近期热门点唱</h2>
+            <p class="section-sub">根据大众点唱热度整理，仅供参考与选歌灵感</p>
+            <div class="song-cats">
+                <span class="cat-tag">华语流行</span>
+                <span class="cat-tag">粤语经典</span>
+                <span class="cat-tag">K-pop</span>
+                <span class="cat-tag">欧美热单</span>
+                <span class="cat-tag">怀旧金曲</span>
+                <span class="cat-tag">影视OST</span>
+            </div>
+            <div class="song-list">
+                <div class="song-item">
+                    <h4>晴天</h4>
+                    <div class="singer">周杰伦</div>
+                    <span class="hot">🔥 常青点唱</span>
+                </div>
+                <div class="song-item">
+                    <h4>海阔天空</h4>
+                    <div class="singer">Beyond</div>
+                    <span class="hot">🔥 经典必点</span>
+                </div>
+                <div class="song-item">
+                    <h4>光年之外</h4>
+                    <div class="singer">邓紫棋</div>
+                    <span class="hot">🔥 高人气</span>
+                </div>
+                <div class="song-item">
+                    <h4>演员</h4>
+                    <div class="singer">薛之谦</div>
+                    <span class="hot">🔥 热门点唱</span>
+                </div>
+                <div class="song-item">
+                    <h4>告白气球</h4>
+                    <div class="singer">周杰伦</div>
+                    <span>甜蜜对唱</span>
+                </div>
+                <div class="song-item">
+                    <h4>泡沫</h4>
+                    <div class="singer">邓紫棋</div>
+                    <span>高音挑战</span>
+                </div>
+                <div class="song-item">
+                    <h4>后来</h4>
+                    <div class="singer">刘若英</div>
+                    <span>怀旧催泪</span>
+                </div>
+                <div class="song-item">
+                    <h4>平凡之路</h4>
+                    <div class="singer">朴树</div>
+                    <span>合唱热门</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="packages" id="packages">
+        <div class="container">
+            <h2 class="section-title">常见欢唱套餐参考</h2>
+            <p class="section-sub">具体价格与内容以各门店实际公示为准</p>
+            <div class="pkg-grid">
+                <div class="pkg-card">
+                    <span class="tag">午后轻唱</span>
+                    <h3>工作日白天场</h3>
+                    <div class="price">¥99 起</div>
+                    <ul>
+                        <li>3小时欢唱</li>
+                        <li>小食拼盘一份</li>
+                        <li>饮品畅饮（指定款）</li>
+                        <li>适合2-4人</li>
+                    </ul>
+                </div>
+                <div class="pkg-card">
+                    <span class="tag">人气之选</span>
+                    <h3>晚间欢唱场</h3>
+                    <div class="price">¥199 起</div>
+                    <ul>
+                        <li>4小时欢唱</li>
+                        <li>果盘+小吃组合</li>
+                        <li>精酿啤酒4杯</li>
+                        <li>适合6-8人</li>
+                    </ul>
+                </div>
+                <div class="pkg-card">
+                    <span class="tag">聚会尊享</span>
+                    <h3>派对主题房</h3>
+                    <div class="price">¥399 起</div>
+                    <ul>
+                        <li>5小时欢唱</li>
+                        <li>豪华小吃拼盘</li>
+                        <li>饮品升级畅饮</li>
+                        <li>主题布置+独立洗手间</li>
+                        <li>适合10人以上</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="tips-section" id="tips">
+        <div class="container">
+            <h2 class="section-title">麦乐迪欢唱小攻略</h2>
+            <p class="section-sub">掌握这些小技巧，让每一次聚会都更尽兴</p>
+            <div class="tips-grid">
+                <div class="tip-box">
+                    <h3>📌 提前预约更省心</h3>
+                    <p>节假日或周末晚间属于高峰时段，建议提前通过电话或线上渠道预订包间，避免到店后长时间等待。</p>
+                </div>
+                <div class="tip-box">
+                    <h3>🎵 善用手机点歌</h3>
+                    <p>到店后可以连接店内Wi-Fi，使用扫码点歌功能，直接在手机上搜索、置顶和排队点唱，操作更流畅。</p>
+                </div>
+                <div class="tip-box">
+                    <h3>👥 注意包间人数限制</h3>
+                    <p>每个包间都有建议容纳人数，人数过多会显得拥挤且影响音响效果。选包间时先确认好聚会人数。</p>
+                </div>
+                <div class="tip-box">
+                    <h3>💡 白天场性价比高</h3>
+                    <p>如果时间灵活，工作日下午的欢唱套餐通常更划算，适合学生聚会或自由职业者错峰娱乐。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="faq-section" id="faq">
+        <div class="container">
+            <h2 class="section-title">关于麦乐迪的常见问题</h2>
+            <p class="section-sub">解答你可能关心的点唱与聚会疑问</p>
+            <div class="faq-list">
+                <details class="faq-item">
+                    <summary>麦乐迪是量贩式KTV吗？</summary>
+                    <p>麦乐迪属于典型的量贩式KTV运营模式，按场次或时段计费，提供超市自选食品和饮品，没有最低消费压力，消费透明，适合大众聚会。</p>
+                </details>
+                <details class="faq-item">
+                    <summary>可以自带酒水食物吗？</summary>
+                    <p>多数麦乐迪门店不允许自带酒水和食品，店内设有超市可选购零食饮料。部分门店可能有特殊规定，建议提前致电确认。</p>
+                </details>
+                <details class="faq-item">
+                    <summary>曲库更新及时吗？</summary>
+                    <p>麦乐迪的曲库会定期更新，新歌上线速度较快，同时也保留了大量经典歌曲。不同门店曲库可能存在细微差异，具体以门店系统为准。</p>
+                </details>
+                <details class="faq-item">
+                    <summary>适合举办生日聚会吗？</summary>
+                    <p>非常适合。可以提前联系门店布置主题包间，部分门店还提供生日祝福服务。建议提前预约并说明需求，以便门店做准备。</p>
+                </details>
+                <details class="faq-item">
+                    <summary>如何查询附近的门店？</summary>
+                    <p>可以通过手机地图应用搜索"麦乐迪KTV"，或访问官方网站的门店查询页面，获取各城市门店地址和联系电话。</p>
+                </details>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>麦乐迪 · 让每一次欢唱都值得纪念</p>
+            <p style="margin-top: 8px;">本页面仅为信息展示与娱乐参考，不构成商业要约。具体服务、价格及活动以各门店实际公示为准。</p>
+            <div class="copyright">
+                © 2025 麦乐迪主题资讯站 · 用心分享欢唱生活
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
