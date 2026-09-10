@@ -1,0 +1,832 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>傻傻的爱广场舞-热门教学视频与舞曲大全分享</title>
+    <meta name="description" content="傻傻的爱广场舞教学视频、舞曲原唱、分解动作讲解与广场舞爱好者交流指南，带你轻松学会这支动感流行的广场舞。">
+    <meta name="keywords" content="傻傻的爱,广场舞,傻傻的爱广场舞,广场舞教学,广场舞视频,广场舞曲,分解动作">
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
+            background: #fef8f0;
+            color: #3d2e2a;
+            line-height: 1.7;
+        }
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+        ul {
+            list-style: none;
+        }
+        img {
+            max-width: 100%;
+            display: block;
+        }
+        .container {
+            max-width: 1240px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        /* 顶部条 */
+        .topbar {
+            background: #f8d5c0;
+            padding: 8px 0;
+            font-size: 13px;
+            color: #6e4b3a;
+        }
+        .topbar .container {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 5px;
+        }
+        .topbar span a {
+            margin-left: 15px;
+            color: #8a5a44;
+        }
+        /* 页眉 */
+        .site-header {
+            background: linear-gradient(135deg, #ff9e7d, #f76b45);
+            padding: 20px 0;
+            color: #fff;
+            box-shadow: 0 4px 12px rgba(230, 100, 60, 0.2);
+        }
+        .header-flex {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+        .logo-area h1 {
+            font-size: 2.2rem;
+            font-weight: 800;
+            letter-spacing: 2px;
+            text-shadow: 2px 2px 0 rgba(0,0,0,0.08);
+        }
+        .logo-area p {
+            font-size: 0.9rem;
+            opacity: 0.9;
+            margin-top: 2px;
+            letter-spacing: 1px;
+        }
+        .search-box {
+            display: flex;
+            background: #fff;
+            border-radius: 40px;
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        .search-box input {
+            border: none;
+            outline: none;
+            padding: 10px 20px;
+            font-size: 0.95rem;
+            width: 240px;
+            color: #333;
+            background: transparent;
+        }
+        .search-box button {
+            background: #d94f2b;
+            border: none;
+            color: #fff;
+            padding: 0 18px;
+            font-size: 1rem;
+            cursor: pointer;
+            font-weight: bold;
+        }
+        /* 导航 */
+        .main-nav {
+            background: #fff;
+            border-bottom: 2px solid #f0d9cc;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.04);
+        }
+        .main-nav ul {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .main-nav li a {
+            display: block;
+            padding: 14px 26px;
+            font-size: 1rem;
+            font-weight: 600;
+            color: #4e3a32;
+            transition: all 0.2s;
+        }
+        .main-nav li a:hover,
+        .main-nav li.active a {
+            color: #f76b45;
+            background: #fff3ec;
+        }
+        /* 主视觉 hero */
+        .hero {
+            background: linear-gradient(120deg, #ffe8db, #ffd2bd);
+            padding: 45px 0;
+            margin-bottom: 30px;
+        }
+        .hero .container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 30px;
+        }
+        .hero-text {
+            flex: 1 1 400px;
+        }
+        .hero-text h2 {
+            font-size: 2.3rem;
+            color: #c2471e;
+            margin-bottom: 12px;
+            font-weight: 900;
+            line-height: 1.3;
+        }
+        .hero-text p {
+            font-size: 1.05rem;
+            max-width: 560px;
+            margin-bottom: 22px;
+            color: #633f30;
+        }
+        .btn-group {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+        .btn {
+            display: inline-block;
+            padding: 12px 24px;
+            border-radius: 40px;
+            font-weight: 700;
+            background: #f76b45;
+            color: #fff;
+            box-shadow: 0 4px 10px rgba(247, 107, 69, 0.3);
+            transition: 0.2s;
+        }
+        .btn.secondary {
+            background: #fff;
+            color: #f76b45;
+            border: 2px solid #f76b45;
+            box-shadow: none;
+        }
+        .btn:hover {
+            transform: translateY(-3px);
+        }
+        .hero-art {
+            flex: 1 1 280px;
+            background: #fff;
+            border-radius: 20px;
+            padding: 25px 20px;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(180, 90, 50, 0.12);
+        }
+        .hero-art .dance-icon {
+            font-size: 4rem;
+            margin-bottom: 10px;
+        }
+        .hero-art h3 {
+            color: #d94f2b;
+            font-size: 1.4rem;
+            margin-bottom: 8px;
+        }
+        .hero-art p {
+            color: #7a5a4b;
+            font-size: 0.9rem;
+        }
+        /* 栏目标题 */
+        .section-title {
+            text-align: center;
+            margin: 40px 0 20px;
+            position: relative;
+        }
+        .section-title h2 {
+            font-size: 1.8rem;
+            color: #b23d1e;
+            display: inline-block;
+            background: #fef8f0;
+            padding: 0 25px;
+            position: relative;
+            z-index: 2;
+            letter-spacing: 2px;
+        }
+        .section-title::before {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background: #e6b9a4;
+            z-index: 1;
+        }
+        /* 分类卡片 */
+        .cat-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+        .cat-card {
+            background: #fff;
+            border-radius: 16px;
+            padding: 25px 15px;
+            text-align: center;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.04);
+            transition: 0.3s;
+            border: 1px solid #f5e0d5;
+        }
+        .cat-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 10px 25px rgba(200, 90, 50, 0.1);
+        }
+        .cat-card .icon {
+            font-size: 2.8rem;
+            margin-bottom: 10px;
+        }
+        .cat-card h3 {
+            font-size: 1.1rem;
+            color: #5b3a2b;
+            margin-bottom: 6px;
+        }
+        .cat-card p {
+            font-size: 0.85rem;
+            color: #927a6d;
+        }
+        /* 视频卡片区 */
+        .video-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+            margin: 20px 0 30px;
+        }
+        .video-card {
+            background: #fff;
+            border-radius: 18px;
+            overflow: hidden;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.06);
+            transition: 0.3s;
+            border: 1px solid #f3e0d6;
+        }
+        .video-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 30px rgba(180, 90, 50, 0.12);
+        }
+        .video-thumb {
+            background: linear-gradient(135deg, #ffbc9a, #f68e66);
+            height: 160px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            font-size: 3.5rem;
+            position: relative;
+        }
+        .video-thumb .play-badge {
+            position: absolute;
+            background: rgba(0,0,0,0.3);
+            width: 55px;
+            height: 55px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.4rem;
+            backdrop-filter: blur(2px);
+        }
+        .video-info {
+            padding: 18px 18px 20px;
+        }
+        .video-info h3 {
+            font-size: 1.1rem;
+            margin-bottom: 6px;
+            color: #442e25;
+        }
+        .video-info .meta {
+            font-size: 0.82rem;
+            color: #a28577;
+            display: flex;
+            justify-content: space-between;
+        }
+        .video-info .tag {
+            background: #fde8dc;
+            color: #d1542d;
+            padding: 3px 10px;
+            border-radius: 15px;
+            display: inline-block;
+            font-size: 0.75rem;
+            margin-top: 10px;
+            font-weight: 600;
+        }
+        /* 舞曲列表 */
+        .music-list {
+            background: #fff;
+            border-radius: 18px;
+            padding: 20px 25px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.04);
+            margin: 20px 0 30px;
+        }
+        .music-item {
+            display: flex;
+            align-items: center;
+            padding: 12px 0;
+            border-bottom: 1px solid #f4e5dc;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+        .music-item:last-child {
+            border-bottom: none;
+        }
+        .music-rank {
+            background: #f76b45;
+            color: #fff;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 0.9rem;
+        }
+        .music-name {
+            flex: 1;
+            font-weight: 600;
+            color: #4d352a;
+        }
+        .music-singer {
+            color: #937a6d;
+            font-size: 0.9rem;
+            width: 120px;
+        }
+        .music-action {
+            background: #fde8dc;
+            border: none;
+            padding: 5px 14px;
+            border-radius: 30px;
+            color: #c2471e;
+            font-size: 0.8rem;
+            cursor: pointer;
+            font-weight: 600;
+        }
+        /* 双栏内容 */
+        .two-col {
+            display: grid;
+            grid-template-columns: 1.8fr 1fr;
+            gap: 30px;
+            margin-bottom: 30px;
+        }
+        .article-card {
+            background: #fff;
+            border-radius: 16px;
+            padding: 25px;
+            box-shadow: 0 3px 12px rgba(0,0,0,0.03);
+            border: 1px solid #f3e2d9;
+        }
+        .article-card h3 {
+            color: #b23d1e;
+            font-size: 1.2rem;
+            margin-bottom: 12px;
+            padding-bottom: 8px;
+            border-bottom: 2px dashed #eecbb8;
+        }
+        .article-card p {
+            margin-bottom: 12px;
+            font-size: 0.97rem;
+        }
+        .article-card ul {
+            padding-left: 0;
+        }
+        .article-card li {
+            padding: 8px 0;
+            border-bottom: 1px solid #f8ebe3;
+            display: flex;
+            gap: 8px;
+            align-items: baseline;
+        }
+        .article-card li::before {
+            content: "♪";
+            color: #f76b45;
+            font-weight: bold;
+        }
+        .steps-list {
+            counter-reset: step;
+        }
+        .steps-list li {
+            counter-increment: step;
+            display: block;
+            border: none;
+            padding: 10px 0 10px 40px;
+            position: relative;
+        }
+        .steps-list li::before {
+            content: counter(step);
+            position: absolute;
+            left: 0;
+            top: 8px;
+            background: #f76b45;
+            color: #fff;
+            width: 26px;
+            height: 26px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.85rem;
+        }
+        /* FAQ */
+        .faq-box {
+            background: #fff7f2;
+            border-radius: 18px;
+            padding: 25px 30px;
+            margin: 25px 0;
+        }
+        .faq-item {
+            padding: 14px 0;
+            border-bottom: 1px solid #f0d9cc;
+        }
+        .faq-item:last-child {
+            border-bottom: none;
+        }
+        .faq-q {
+            font-weight: 700;
+            color: #9a3f1f;
+            margin-bottom: 5px;
+            display: flex;
+            gap: 8px;
+        }
+        .faq-q::before {
+            content: "Q";
+            background: #f76b45;
+            color: #fff;
+            width: 22px;
+            height: 22px;
+            border-radius: 8px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.8rem;
+            flex-shrink: 0;
+            margin-top: 3px;
+        }
+        .faq-a {
+            color: #5c463b;
+            padding-left: 30px;
+            font-size: 0.95rem;
+        }
+        /* 页脚 */
+        .site-footer {
+            background: #3d2b22;
+            color: #dcc8bb;
+            padding: 40px 0 25px;
+            margin-top: 50px;
+        }
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr;
+            gap: 30px;
+            margin-bottom: 20px;
+        }
+        .site-footer h3 {
+            color: #f7b69a;
+            margin-bottom: 15px;
+            font-size: 1.1rem;
+        }
+        .site-footer a {
+            color: #c4a89a;
+            display: block;
+            margin-bottom: 7px;
+            font-size: 0.9rem;
+        }
+        .copyright {
+            text-align: center;
+            border-top: 1px solid #594239;
+            padding-top: 20px;
+            font-size: 0.85rem;
+            color: #a78d7e;
+        }
+        /* 响应式 */
+        @media (max-width: 992px) {
+            .cat-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .video-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .two-col {
+                grid-template-columns: 1fr;
+            }
+        }
+        @media (max-width: 600px) {
+            .header-flex {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            .search-box {
+                width: 100%;
+            }
+            .search-box input {
+                width: 100%;
+            }
+            .main-nav li a {
+                padding: 12px 14px;
+                font-size: 0.9rem;
+            }
+            .hero-text h2 {
+                font-size: 1.8rem;
+            }
+            .cat-grid,
+            .video-grid {
+                grid-template-columns: 1fr;
+            }
+            .footer-grid {
+                grid-template-columns: 1fr;
+                gap: 25px;
+            }
+            .music-singer {
+                width: auto;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- 顶部信息 -->
+    <div class="topbar">
+        <div class="container">
+            <span>💃 舞动快乐 · 健康同行</span>
+            <span>
+                <a href="#">舞友社区</a>
+                <a href="#">舞曲下载</a>
+                <a href="#">教学投稿</a>
+            </span>
+        </div>
+    </div>
+
+    <!-- 页眉 -->
+    <header class="site-header">
+        <div class="container header-flex">
+            <div class="logo-area">
+                <h1>傻傻的爱广场舞</h1>
+                <p>热门舞曲 · 教学视频 · 舞友之家</p>
+            </div>
+            <div class="search-box">
+                <input type="text" placeholder="搜舞曲、教学视频...">
+                <button type="button">搜索</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- 导航 -->
+    <nav class="main-nav">
+        <div class="container">
+            <ul>
+                <li class="active"><a href="#">首页</a></li>
+                <li><a href="#">最新教学</a></li>
+                <li><a href="#">舞曲大全</a></li>
+                <li><a href="#">分解动作</a></li>
+                <li><a href="#">原创编舞</a></li>
+                <li><a href="#">舞友论坛</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main>
+        <!-- Hero 首屏 -->
+        <section class="hero">
+            <div class="container">
+                <div class="hero-text">
+                    <h2>《傻傻的爱》广场舞 一起跳起来</h2>
+                    <p>节奏明快、动作简单，这支红遍大江南北的广场舞，让无数舞友在晨光与晚霞中尽情摇摆。这里为你精选了完整教学、正面背面示范、慢速分解以及原版舞曲，零基础也能轻松跟上。</p>
+                    <div class="btn-group">
+                        <a href="#" class="btn">▶ 观看完整教学</a>
+                        <a href="#" class="btn secondary">♫ 下载舞曲</a>
+                    </div>
+                </div>
+                <div class="hero-art">
+                    <div class="dance-icon">🕺💃</div>
+                    <h3>傻傻的爱 · 动感恰恰</h3>
+                    <p>32步 3分钟 中速<br>适合晨练、晚练、节庆表演</p>
+                </div>
+            </div>
+        </section>
+
+        <div class="container">
+            <!-- 分类导航卡片 -->
+            <div class="section-title"><h2>热门舞曲分类</h2></div>
+            <div class="cat-grid">
+                <div class="cat-card">
+                    <div class="icon">🎬</div>
+                    <h3>完整教学</h3>
+                    <p>正面示范+背面跟练</p>
+                </div>
+                <div class="cat-card">
+                    <div class="icon">🔍</div>
+                    <h3>分解动作</h3>
+                    <p>八拍拆解 慢速详解</p>
+                </div>
+                <div class="cat-card">
+                    <div class="icon">🎵</div>
+                    <h3>原版舞曲</h3>
+                    <p>高音质MP3下载</p>
+                </div>
+                <div class="cat-card">
+                    <div class="icon">👥</div>
+                    <h3>队形编排</h3>
+                    <p>广场/舞台队形设计</p>
+                </div>
+            </div>
+
+            <!-- 最新教学视频 -->
+            <div class="section-title"><h2>🔥 最新教学视频</h2></div>
+            <div class="video-grid">
+                <div class="video-card">
+                    <div class="video-thumb">
+                        <span>🎥</span>
+                        <span class="play-badge">▶</span>
+                    </div>
+                    <div class="video-info">
+                        <h3>《傻傻的爱》正面完整教学</h3>
+                        <div class="meta"><span>时长 04:32</span><span>难度 ★★☆</span></div>
+                        <span class="tag">人气 12.6w</span>
+                    </div>
+                </div>
+                <div class="video-card">
+                    <div class="video-thumb" style="background: linear-gradient(135deg, #f7b89a, #e9835a);">
+                        <span>💃</span>
+                        <span class="play-badge">▶</span>
+                    </div>
+                    <div class="video-info">
+                        <h3>背面分解教学·慢动作</h3>
+                        <div class="meta"><span>时长 08:15</span><span>难度 ★☆☆</span></div>
+                        <span class="tag">新手必看</span>
+                    </div>
+                </div>
+                <div class="video-card">
+                    <div class="video-thumb" style="background: linear-gradient(135deg, #f5c6a3, #e0764e);">
+                        <span>🎶</span>
+                        <span class="play-badge">▶</span>
+                    </div>
+                    <div class="video-info">
+                        <h3>32步恰恰版·口令跟练</h3>
+                        <div class="meta"><span>时长 06:20</span><span>难度 ★★☆</span></div>
+                        <span class="tag">口令版</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 热门舞曲榜单 -->
+            <div class="section-title"><h2>🎵 傻傻的爱舞曲热榜</h2></div>
+            <div class="music-list">
+                <div class="music-item">
+                    <span class="music-rank">1</span>
+                    <span class="music-name">傻傻的爱 (DJ何鹏版)</span>
+                    <span class="music-singer">何鹏</span>
+                    <button class="music-action" type="button">播放</button>
+                </div>
+                <div class="music-item">
+                    <span class="music-rank">2</span>
+                    <span class="music-name">傻傻的爱 (恰恰舞曲)</span>
+                    <span class="music-singer">广场舞精选</span>
+                    <button class="music-action" type="button">播放</button>
+                </div>
+                <div class="music-item">
+                    <span class="music-rank">3</span>
+                    <span class="music-name">傻傻的爱 (吉特巴版)</span>
+                    <span class="music-singer">舞曲制作</span>
+                    <button class="music-action" type="button">播放</button>
+                </div>
+                <div class="music-item">
+                    <span class="music-rank">4</span>
+                    <span class="music-name">傻傻的爱 (原版慢摇)</span>
+                    <span class="music-singer">原唱歌手</span>
+                    <button class="music-action" type="button">播放</button>
+                </div>
+                <div class="music-item">
+                    <span class="music-rank">5</span>
+                    <span class="music-name">傻傻的爱 (32步教学版)</span>
+                    <span class="music-singer">舞队制作</span>
+                    <button class="music-action" type="button">播放</button>
+                </div>
+            </div>
+
+            <!-- 学习指南 + 舞友心得 -->
+            <div class="two-col">
+                <div class="article-card">
+                    <h3>📖 新手学舞指南</h3>
+                    <p>第一次接触《傻傻的爱》这支舞？别担心，按照下面的步骤循序渐进，很快就能掌握基本步伐。</p>
+                    <ul class="steps-list">
+                        <li>先熟悉音乐节奏，多听几遍原曲，感受鼓点和重拍。</li>
+                        <li>观看分解教学视频，先学脚上动作，再配合手部姿势。</li>
+                        <li>采用慢速0.75倍跟练，确保每个动作到位。</li>
+                        <li>加入舞友交流群，约上伙伴一起练习更有动力。</li>
+                        <li>每天坚持20分钟，一周内就能完整跟跳。</li>
+                    </ul>
+                </div>
+                <div class="article-card">
+                    <h3>💬 舞友热评</h3>
+                    <ul>
+                        <li>“这舞节奏感太强了，我们队里六十多岁的大姐一学就会！”</li>
+                        <li>“音乐很欢快，跳起来心情特别好，已经安利给隔壁舞队了。”</li>
+                        <li>“分解动作讲得很细致，终于把之前搞混的转身弄明白了。”</li>
+                        <li>“晚上广场上放这首，围观的人特别多，大家都想加入。”</li>
+                        <li>“希望多出一些这样的经典舞曲教学，支持！”</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- 常见问题 FAQ -->
+            <div class="section-title"><h2>❓ 常见问题解答</h2></div>
+            <div class="faq-box">
+                <div class="faq-item">
+                    <div class="faq-q">《傻傻的爱》广场舞适合零基础的人学吗？</div>
+                    <div class="faq-a">非常适合。这支舞节奏中等、重复动作多，编舞中大量使用基本步和简单的转身，只要跟着分解教学多练几遍就能掌握，很多初学者一两天就能跟跳大半段。</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-q">在哪里可以找到完整的教学视频？</div>
+                    <div class="faq-a">本站整理了正面演示、背面示范以及慢速分解等多个版本的教学视频，可前往“最新教学视频”栏目选择适合你的版本观看，同时也支持手机端流畅播放。</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-q">我想下载《傻傻的爱》舞曲MP3，怎么获取？</div>
+                    <div class="faq-a">在“舞曲大全”板块中提供了多种版本的音乐试听与下载入口，包括DJ版、恰恰版和原唱版等，可根据自己喜好选择。</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-q">这支舞有哪些常见的变奏或队形？</div>
+                    <div class="faq-a">常见的队形有方形、两排、圆形和十字形。对于表演，可以加入前后交换、穿插绕圈等变化，具体可参考“队形编排”栏目中的示例。</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-q">跳广场舞需要注意哪些事项？</div>
+                    <div class="faq-a">建议穿舒适防滑的运动鞋，选择平坦开阔的场地，跳舞前做好热身。运动量适中，如感到不适及时休息，夏天注意补水，冬天注意保暖。</div>
+                </div>
+            </div>
+
+            <!-- 舞队风采与资讯 -->
+            <div class="section-title"><h2>✨ 舞队风采</h2></div>
+            <div class="video-grid">
+                <div class="video-card">
+                    <div class="video-thumb" style="background: linear-gradient(145deg, #f6b48e, #e2835d);">👯</div>
+                    <div class="video-info">
+                        <h3>阳光舞队·公园晨练</h3>
+                        <div class="meta"><span>32人团队</span><span>山东</span></div>
+                        <span class="tag">团队展示</span>
+                    </div>
+                </div>
+                <div class="video-card">
+                    <div class="video-thumb" style="background: linear-gradient(145deg, #f0a77d, #d76a45);">🎭</div>
+                    <div class="video-info">
+                        <h3>社区汇演·傻傻的爱</h3>
+                        <div class="meta"><span>节庆表演</span><span>江苏</span></div>
+                        <span class="tag">舞台版</span>
+                    </div>
+                </div>
+                <div class="video-card">
+                    <div class="video-thumb" style="background: linear-gradient(145deg, #f8c2a2, #e78d66);">📸</div>
+                    <div class="video-info">
+                        <h3>百人共舞·广场活动</h3>
+                        <div class="meta"><span>大型活动</span><span>河南</span></div>
+                        <span class="tag">现场</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- 页脚 -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div>
+                    <h3>关于我们</h3>
+                    <p style="font-size: 0.9rem;">傻傻的爱广场舞爱好者平台，致力于为全国舞友提供优质的教学视频、舞曲资源和交流空间。让我们一起舞出健康，舞出快乐！</p>
+                </div>
+                <div>
+                    <h3>快速导航</h3>
+                    <a href="#">最新教学视频</a>
+                    <a href="#">热门舞曲下载</a>
+                    <a href="#">分解动作教程</a>
+                    <a href="#">原创编舞投稿</a>
+                </div>
+                <div>
+                    <h3>舞友服务</h3>
+                    <a href="#">舞队入驻</a>
+                    <a href="#">问题反馈</a>
+                    <a href="#">版权声明</a>
+                    <a href="#">联系我们</a>
+                </div>
+            </div>
+            <div class="copyright">
+                © 2025 傻傻的爱广场舞 · 舞动生活 健康你我
+            </div>
+        </div>
+    </footer>
+</body>
+  </html>
